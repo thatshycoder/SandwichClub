@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/dy/AndroidStudioProjects/SandwichClub/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v13/values-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/dy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/e8ff75a36311e2367136312c8e4c9fae/res/values-v13/values-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "58",
+                        "endOffsets": "109"
+                    }
+                }
+            ]
+        }
+    ]
+}
