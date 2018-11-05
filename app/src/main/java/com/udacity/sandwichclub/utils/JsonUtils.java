@@ -32,31 +32,36 @@ public class JsonUtils {
             String mainName = name.getString(MAIN_NAME);
 
             JSONArray JSONArrayAlsoKnownAs = name.getJSONArray(ALSO_KNOWN_AS);
-            List<String> alsoKnownAs = convertToListFromArray(JSONArrayAlsoKnownAs);
+            List<String> alsoKnownAs = getListFromArray(JSONArrayAlsoKnownAs);
 
-            String placeOfOrigin = mainJsonObject.optString(PLACE_OF_ORIGIN);
+            String placeOfOrigin = mainJsonObject.getString(PLACE_OF_ORIGIN);
 
             String description = mainJsonObject.getString(DESCRIPTION);
 
             String image = mainJsonObject.getString(IMAGE);
 
             JSONArray JSONArrayIngredients = mainJsonObject.getJSONArray(INGREDIENTS);
-            List<String> ingredients = convertToListFromArray(JSONArrayIngredients);
+            List<String> ingredients = getListFromArray(JSONArrayIngredients);
 
             return new Sandwich(mainName, alsoKnownAs, placeOfOrigin, description, image, ingredients);
 
         } catch (JSONException e) {
             Log.e(TAG, e.getMessage());
             e.printStackTrace();
+
             return null;
         }
     }
 
-    private static List<String> convertToListFromArray(JSONArray jsonArray) throws JSONException {
+    private static List<String> getListFromArray(JSONArray jsonArray) {
         List<String> list = new ArrayList<>(jsonArray.length());
 
-        for (int i = 0; i < jsonArray.length(); i++) {
-            list.add(jsonArray.getString(i));
+        try {
+            for (int i = 0; i < jsonArray.length(); i++) {
+                list.add(jsonArray.getString(i));
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
 
         return list;

@@ -71,7 +71,6 @@ public class DetailActivity extends AppCompatActivity {
 
     private void populateUI(Sandwich sandwich) {
 
-        // set Text to alsoKnownTv
         if (sandwich.getAlsoKnownAs() != null && sandwich.getAlsoKnownAs().size() > 0) {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.append(sandwich.getAlsoKnownAs().get(0));
@@ -86,7 +85,6 @@ public class DetailActivity extends AppCompatActivity {
             mAlsoKnownLabel.setVisibility(View.GONE);
         }
 
-        // set Text to originTv
         if (sandwich.getPlaceOfOrigin().isEmpty()) {
             mOriginTv.setVisibility(View.GONE);
             mOriginLabel.setVisibility(View.GONE);
@@ -94,10 +92,8 @@ public class DetailActivity extends AppCompatActivity {
             mOriginTv.setText(sandwich.getPlaceOfOrigin());
         }
 
-        // set Text to descriptionTv
         mDescriptionTv.setText(sandwich.getDescription());
 
-        // set Text to ingredientTv
         if (sandwich.getIngredients() != null && sandwich.getIngredients().size() > 0) {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.append(sandwich.getIngredients().get(0));
