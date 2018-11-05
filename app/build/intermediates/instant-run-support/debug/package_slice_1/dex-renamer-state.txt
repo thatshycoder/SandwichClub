@@ -1,4 +1,0 @@
-#Sat Nov 03 23:05:58 WAT 2018
-base.0=/Users/dy/AndroidStudioProjects/SandwichClub/app/build/intermediates/transforms/dexMerger/debug/1
-path.0=classes.dex
-renamed.0=classes.dex
