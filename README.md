@@ -4,7 +4,7 @@
 In this project, you will complete the **Sandwich Club** app to
 show the details of each sandwich once it is selected.
 
-[](https://shycoder.com/wp-content/uploads/2018/11/sandwichClub.png)
+![](https://shycoder.com/wp-content/uploads/2018/11/sandwichClub.png)
 
 ## Why this Project
 
